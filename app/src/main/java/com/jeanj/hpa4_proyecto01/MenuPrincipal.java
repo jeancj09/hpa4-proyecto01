@@ -32,7 +32,8 @@ public class MenuPrincipal extends AppCompatActivity{
 
                 if (Datos.voto.get(Datos.pos)=="0")
                 {
-
+                    Intent intent = new Intent(view.getContext(), PantallaVotacion.class);
+                    startActivityForResult(intent, 0);
                 }
                 else
                 {
@@ -61,7 +62,8 @@ public class MenuPrincipal extends AppCompatActivity{
                 }
                 else
                 {
-
+                    Intent intent = new Intent(view.getContext(), PantallaResultados.class);
+                    startActivityForResult(intent, 0);
                 }
 
             }
