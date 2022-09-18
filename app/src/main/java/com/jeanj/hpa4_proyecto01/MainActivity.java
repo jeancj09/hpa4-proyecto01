@@ -4,6 +4,7 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -15,43 +16,74 @@ import java.util.ArrayList;
 public class MainActivity extends AppCompatActivity {
     EditText etcedula;
     Button bttIS;
-    int val, i, j, pos;
-    //El orden del array es: 0: cédula, 1: Nombre, 2: Votación
-    String [][] usuarios = new String[41][3];
-    ArrayList<String> listacedula = new ArrayList<String>();
-    ArrayList<String> listanombres = new ArrayList<String>();
-    ArrayList<String> voto = new ArrayList<String>();
+    int val, i;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         //A partir de aquí vendría la iniciación de las cédulas y votación
-        listacedula.add("8-888-8888");
-        listanombres.add("El admin");
-        voto.add("0");
+        //PD: Solo agregué 10 para realizar las pruebas, solo quedaría agregar las que faltan
+        Datos.listacedula.add("88-8888-888888");
+        Datos.listacedula.add("08-0944-000327");
+        Datos.listacedula.add("03-0740-001394");
+        Datos.listacedula.add("20-0053-004282");
+        Datos.listacedula.add("08-0943-001867");
+        Datos.listacedula.add("08-0937-000503");
+        Datos.listacedula.add("08-0952-002444");
+        Datos.listacedula.add("08-0943-000012");
+        Datos.listacedula.add("08-0986-000549");
+        Datos.listacedula.add("08-0957-001827");
+        Datos.listacedula.add("08-0940-001311");
+
+
+        Datos.listanombres.add("El admin");
+        Datos.listanombres.add("ARROCHA, EDWIN");
+        Datos.listanombres.add("BRENES, MICHELLE");
+        Datos.listanombres.add("BUSTAMANTE , EDDY");
+        Datos.listanombres.add("CABALLERO, ALEJANDRA");
+        Datos.listanombres.add("CHIARI, GABRIEL");
+        Datos.listanombres.add("CORONADO, KEVIN");
+        Datos.listanombres.add("DELGADO, LUIS");
+        Datos.listanombres.add("DUDLEY, MARC");
+        Datos.listanombres.add("FERNANDEZ, DIEGO");
+        Datos.listanombres.add("FLORES, MARÍA");
+
+        Datos.voto.add("1");
+        for (i=0; i<10; i++)
+        {
+            Datos.voto.add("0");
+        }
+
 
         bttIS = findViewById(R.id.bttIS);
         etcedula= findViewById(R.id.etcedula);
+
         bttIS.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 val= 0;
                 String ced = etcedula.getText().toString();
 
-                if (listacedula.contains(ced))
+                if (Datos.listacedula.contains(ced))
                 {
-                    pos = listacedula.indexOf(ced);
+                    Datos.cedval = ced;
+                    Datos.pos = Datos.listacedula.indexOf(ced);
                     Context context = view.getContext();
-                    CharSequence text = "Bienvenido";
+                    CharSequence text = "Bienvenido " +Datos.listanombres.get(Datos.pos);
                     int duration = Toast.LENGTH_SHORT;
                     Toast toast = Toast.makeText(context, text, duration);
                     toast.show();
+
+                    Intent intent = new Intent(view.getContext(), MenuPrincipal.class);
+                    startActivityForResult(intent, 0);
                 }
                 else
                 {
                     Context context = view.getContext();
-                    CharSequence text = String.valueOf(pos);//"Cédula incorrecta. Ingrese de nuevo.";
+                    CharSequence text = String.valueOf(Datos.pos);//"Cédula incorrecta. Ingrese de nuevo.";
                     int duration = Toast.LENGTH_LONG;
                     Toast toast = Toast.makeText(context, text, duration);
                     toast.show();

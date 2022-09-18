@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MenuPrincipal">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="55dp"
+        android:layout_marginTop="110dp"
+        android:layout_marginEnd="56dp"
+        android:fontFamily="serif"
+        android:text="Bienvenido/a"
+        android:textSize="48sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="103dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="106dp"
+        android:fontFamily="serif"
+        android:text="Escoja una opción"
+        android:textAllCaps="false"
+        android:textSize="24sp"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <Button
+        android:id="@+id/bttRV"
+        android:layout_width="196dp"
+        android:layout_height="87dp"
+        android:layout_marginStart="107dp"
+        android:layout_marginTop="44dp"
+        android:layout_marginEnd="108dp"
+        android:fontFamily="serif"
+        android:text="Realizar una Votación"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <Button
+        android:id="@+id/bttSalirMP"
+        android:layout_width="188dp"
+        android:layout_height="84dp"
+        android:layout_marginStart="107dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="116dp"
+        android:fontFamily="serif"
+        android:text="Salir"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bttVV" />
+
+    <Button
+        android:id="@+id/bttVV"
+        android:layout_width="193dp"
+        android:layout_height="77dp"
+        android:layout_marginStart="107dp"
+        android:layout_marginTop="42dp"
+        android:layout_marginEnd="111dp"
+        android:fontFamily="serif"
+        android:text="Ver escrutinio"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bttRV" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
