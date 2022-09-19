@@ -37,6 +37,7 @@ public class MenuPrincipal extends AppCompatActivity{
                 }
                 else
                 {
+                    Datos.tot=Datos.tot+1;
                     Context context = view.getContext();
                     CharSequence text = "Lo sentimos, ya usted ha realizado un voto";
                     int duration = Toast.LENGTH_LONG;
