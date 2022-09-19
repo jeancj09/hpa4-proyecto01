@@ -11,7 +11,7 @@
         android:layout_width="162dp"
         android:layout_height="258dp"
         android:layout_marginStart="26dp"
-        android:layout_marginTop="37dp"
+        android:layout_marginTop="104dp"
         android:layout_marginEnd="13dp"
         app:layout_constraintEnd_toStartOf="@+id/imgcand"
         app:layout_constraintStart_toStartOf="parent"
@@ -22,7 +22,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="serif"
-            android:text="Candidato 1"
+            android:text="Vivían Valenzuela"
             android:textSize="18sp" />
 
         <RadioButton
@@ -30,7 +30,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="serif"
-            android:text="Candidato 2"
+            android:text="Omar Aizpurua"
             android:textSize="18sp" />
 
         <RadioButton
@@ -38,27 +38,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="serif"
-            android:text="Candidato 3"
+            android:text="Martín Candanedo"
             android:textSize="18sp" />
 
-        <RadioButton
-            android:id="@+id/rbcand4"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:fontFamily="serif"
-            android:text="Candidato 4"
-            android:textSize="18sp" />
-
-        <RadioButton
-            android:id="@+id/rbcand5"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:fontFamily="serif"
-            android:text="Candidato 5"
-            android:textAlignment="viewStart"
-            android:textSize="18sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
     </RadioGroup>
 
     <TextView

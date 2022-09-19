@@ -25,8 +25,6 @@ public class PantallaVotacion extends AppCompatActivity {
         rbc1 = findViewById(R.id.rbcand1);
         rbc2 = findViewById(R.id.rbcand2);
         rbc3 = findViewById(R.id.rbcand3);
-        rbc4 = findViewById(R.id.rbcand4);
-        rbc5 = findViewById(R.id.rbcand5);
         bttVotar = findViewById(R.id.bttVotar);
         imgcand = findViewById(R.id.imgcand);
         Datos.numvoto = 0;
@@ -36,38 +34,22 @@ public class PantallaVotacion extends AppCompatActivity {
         rbc1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                imgcand.setImageResource(R.drawable.icon_persona); //Se cambia el icon_persona por la imagen de la persona, igual en las demás.
+                imgcand.setImageResource(R.drawable.vivian_valenzuela); //Se cambia el icon_persona por la imagen de la persona, igual en las demás.
                 Datos.numvoto = 1;
             }
         });
         rbc2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                imgcand.setImageResource(R.drawable.icon_persona);
+                imgcand.setImageResource(R.drawable.omar_aizpurua);
                 Datos.numvoto = 2;
             }
         });
         rbc3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                imgcand.setImageResource(R.drawable.icon_persona);
+                imgcand.setImageResource(R.drawable.matin_candanedo);
                 Datos.numvoto = 3;
-
-            }
-        });
-        rbc4.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                imgcand.setImageResource(R.drawable.icon_persona);
-                Datos.numvoto = 4;
-
-            }
-        });
-        rbc5.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                imgcand.setImageResource(R.drawable.icon_persona);
-                Datos.numvoto = 5;
 
             }
         });

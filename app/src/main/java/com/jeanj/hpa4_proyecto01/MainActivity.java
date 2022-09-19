@@ -1,6 +1,5 @@
 package com.jeanj.hpa4_proyecto01;
 
-import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
@@ -10,8 +9,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
-
-import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
     EditText etcedula;
@@ -116,7 +113,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
 
-        bttIS = findViewById(R.id.bttIS);
+        bttIS = findViewById(R.id.bttback);
         etcedula= findViewById(R.id.etcedula);
 
         bttIS.setOnClickListener(new View.OnClickListener() {
