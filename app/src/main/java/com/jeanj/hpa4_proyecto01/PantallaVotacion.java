@@ -27,7 +27,12 @@ public class PantallaVotacion extends AppCompatActivity {
         rbc3 = findViewById(R.id.rbcand3);
         bttVotar = findViewById(R.id.bttVotar);
         imgcand = findViewById(R.id.imgcand);
+
+
         Datos.numvoto = 0;
+        rbc1.setSelected(false);
+        rbc2.setSelected(false);
+        rbc3.setSelected(false);
 
 
         //Con los radioButton se hará un cambio de la imagen
@@ -58,26 +63,46 @@ public class PantallaVotacion extends AppCompatActivity {
         bttVotar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-if(rbc1.isChecked()|rbc2.isChecked()|rbc3.isChecked()){
-    Datos.voto.set(Datos.pos, String.valueOf(Datos.numvoto));
+                if (Datos.numvoto == 1 || Datos.numvoto == 2 || Datos.numvoto == 3)
+                {
+                    Datos.voto.set(Datos.pos, String.valueOf(Datos.numvoto));
 
-    Context context = view.getContext();
-    CharSequence text = "Votación realizada con éxito.";
-    int duration = Toast.LENGTH_SHORT;
-    Toast toast = Toast.makeText(context, text, duration);
-    toast.show();
 
-    Intent intent = new Intent(view.getContext(), MenuPrincipal.class);
-    startActivityForResult(intent, 0);
-}
-else{
-   Toast toast= Toast.makeText(getApplicationContext(),"Debe seleccionar alguno de los candidatos",Toast.LENGTH_SHORT);
-    toast.show();
-}
+                    if(Datos.numvoto == 1)
+                    {
+                        Datos.cont1++;
+                        Datos.tot++;
+                    }
+                    else if(Datos.numvoto == 2)
+                    {
+                        Datos.cont2++;
+                        Datos.tot++;
+                    }
+                    else if (Datos.numvoto == 3)
+                    {
+                        Datos.cont3++;
+                        Datos.tot++;
+                    }
+
+                    Context context = view.getContext();
+                    CharSequence text = "Votación realizada con éxito.";
+                    int duration = Toast.LENGTH_SHORT;
+                    Toast toast = Toast.makeText(context, text, duration);
+                    toast.show();
+
+                    Intent intent = new Intent(view.getContext(), MenuPrincipal.class);
+                    startActivityForResult(intent, 0);
+                }
+                else
+                {
+                    Context context = view.getContext();
+                    CharSequence text = "Debe elegir un candidato primero antes de votar.";
+                    int duration = Toast.LENGTH_SHORT;
+                    Toast toast = Toast.makeText(context, text, duration);
+                    toast.show();
+                }
 
             }
         });
-
-
     }
 }

@@ -32,7 +32,6 @@ public class MenuPrincipal extends AppCompatActivity{
 
                 if (Datos.voto.get(Datos.pos)=="0")
                 {
-                    Datos.tot+=1;
                     Intent intent = new Intent(view.getContext(), PantallaVotacion.class);
                     startActivityForResult(intent, 0);
                 }

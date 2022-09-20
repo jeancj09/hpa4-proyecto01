@@ -107,7 +107,7 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-        for (i=0; i<38; i++)
+        for (i=0; i<39; i++)
         {
             Datos.voto.add("0");
         }
