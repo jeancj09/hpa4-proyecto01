@@ -25,7 +25,7 @@ v1=findViewById(R.id.votos1);
 v2=findViewById(R.id.votos2);
 v3=findViewById(R.id.votos3);
 for(int i=0;i<38;i++){
-    if(Datos.voto(i)=="1"){
+/*   if(Datos.voto(i)=="1"){
         c1+=1;
     }
     if(Datos.voto(i)=="2"){
@@ -33,7 +33,7 @@ for(int i=0;i<38;i++){
     }
     if(Datos.voto(i)=="1"){
         c3+=1;
-    }
+    }*/
 }
 
         v1.setText(" Num votos "+Datos.voto.get(0)+" Num votos "+Datos.numvoto);

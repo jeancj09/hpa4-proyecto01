@@ -18,7 +18,7 @@ public class PantallaVotacion extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pantalla_votacion);
 
-        RadioButton rbc1, rbc2, rbc3, rbc4, rbc5;
+        RadioButton rbc1, rbc2, rbc3;
         Button bttVotar;
         ImageView imgcand;
 
@@ -58,17 +58,22 @@ public class PantallaVotacion extends AppCompatActivity {
         bttVotar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+if(rbc1.isChecked()|rbc2.isChecked()|rbc3.isChecked()){
+    Datos.voto.set(Datos.pos, String.valueOf(Datos.numvoto));
 
-                Datos.voto.set(Datos.pos, String.valueOf(Datos.numvoto));
+    Context context = view.getContext();
+    CharSequence text = "Votación realizada con éxito.";
+    int duration = Toast.LENGTH_SHORT;
+    Toast toast = Toast.makeText(context, text, duration);
+    toast.show();
 
-                Context context = view.getContext();
-                CharSequence text = "Votación realizada con éxito.";
-                int duration = Toast.LENGTH_SHORT;
-                Toast toast = Toast.makeText(context, text, duration);
-                toast.show();
-
-                Intent intent = new Intent(view.getContext(), MenuPrincipal.class);
-                startActivityForResult(intent, 0);
+    Intent intent = new Intent(view.getContext(), MenuPrincipal.class);
+    startActivityForResult(intent, 0);
+}
+else{
+   Toast toast= Toast.makeText(getApplicationContext(),"Debe seleccionar alguno de los candidatos",Toast.LENGTH_SHORT);
+    toast.show();
+}
 
             }
         });
