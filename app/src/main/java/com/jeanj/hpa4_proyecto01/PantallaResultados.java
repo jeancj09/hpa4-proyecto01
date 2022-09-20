@@ -27,11 +27,13 @@ public class PantallaResultados extends AppCompatActivity {
         String c1 = String.valueOf(Datos.cont1);
         String c2 = String.valueOf(Datos.cont2);
         String c3 = String.valueOf(Datos.cont3);
-        String totvot = String.valueOf(Datos.tot);
+        String totvot = String.valueOf((Datos.cont1*100)/Datos.tot);
+        String totvot2 = String.valueOf((Datos.cont2*100)/Datos.tot);
+        String totvot3 = String.valueOf((Datos.cont3*100)/Datos.tot);
 
-        v1.setText(" Num votos "+c1+" Num votos "+totvot);
-        v2.setText(" Num votos "+c2+" Num votos "+totvot);
-        v3.setText(" Num votos "+c3+" Num votos "+totvot);
+        v1.setText(" Num votos: "+c1+" Procentaje: "+totvot+"%");
+        v2.setText(" Num votos: "+c2+" Procentaje: "+totvot2+"%");
+        v3.setText(" Num votos: "+c3+" Procentaje: "+totvot3+"%");
 
         bttback.setOnClickListener(new View.OnClickListener() {
             @Override
