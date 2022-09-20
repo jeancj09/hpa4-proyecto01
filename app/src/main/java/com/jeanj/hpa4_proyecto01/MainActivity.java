@@ -138,8 +138,8 @@ public class MainActivity extends AppCompatActivity {
                 else
                 {
                     Context context = view.getContext();
-                    CharSequence text = String.valueOf(Datos.pos);//"Cédula incorrecta. Ingrese de nuevo.";
-                    int duration = Toast.LENGTH_LONG;
+                    CharSequence text = "Cédula incorrecta. Ingrese de nuevo.";
+                    int duration = Toast.LENGTH_SHORT;
                     Toast toast = Toast.makeText(context, text, duration);
                     toast.show();
                 }

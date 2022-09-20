@@ -63,7 +63,7 @@ public class PantallaVotacion extends AppCompatActivity {
 
                 Context context = view.getContext();
                 CharSequence text = "Votación realizada con éxito.";
-                int duration = Toast.LENGTH_LONG;
+                int duration = Toast.LENGTH_SHORT;
                 Toast toast = Toast.makeText(context, text, duration);
                 toast.show();
 

@@ -32,15 +32,16 @@ public class MenuPrincipal extends AppCompatActivity{
 
                 if (Datos.voto.get(Datos.pos)=="0")
                 {
+                    Datos.tot+=1;
                     Intent intent = new Intent(view.getContext(), PantallaVotacion.class);
                     startActivityForResult(intent, 0);
                 }
                 else
                 {
-                    Datos.tot=Datos.tot+1;
+
                     Context context = view.getContext();
                     CharSequence text = "Lo sentimos, ya usted ha realizado un voto";
-                    int duration = Toast.LENGTH_LONG;
+                    int duration = Toast.LENGTH_SHORT;
                     Toast toast = Toast.makeText(context, text, duration);
                     toast.show();
                 }
@@ -57,7 +58,7 @@ public class MenuPrincipal extends AppCompatActivity{
                 {
                     Context context = view.getContext();
                     CharSequence text = "Lo sentimos, usted no ha votado";
-                    int duration = Toast.LENGTH_LONG;
+                    int duration = Toast.LENGTH_SHORT;
                     Toast toast = Toast.makeText(context, text, duration);
                     toast.show();
                 }
