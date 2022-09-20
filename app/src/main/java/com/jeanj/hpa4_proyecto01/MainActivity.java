@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
 
         //A partir de aquí vendría la iniciación de las cédulas y votación
         //PD: Solo agregué 10 para realizar las pruebas, solo quedaría agregar las que faltan
-        Datos.listacedula.add("88-8888-888888");
+
         Datos.listacedula.add("08-0944-000327");
         Datos.listacedula.add("03-0740-001394");
         Datos.listacedula.add("20-0053-004282");
@@ -64,7 +64,7 @@ public class MainActivity extends AppCompatActivity {
         Datos.listacedula.add("03-0752-001461");
         Datos.listacedula.add("03-0745-000950");
 
-        Datos.listanombres.add("El admin");
+
         Datos.listanombres.add("ARROCHA, EDWIN");
         Datos.listanombres.add("BRENES, MICHELLE");
         Datos.listanombres.add("BUSTAMANTE , EDDY");
@@ -107,7 +107,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         Datos.voto.add("1");
-        for (i=0; i<39; i++)
+        for (i=0; i<38; i++)
         {
             Datos.voto.add("0");
         }
