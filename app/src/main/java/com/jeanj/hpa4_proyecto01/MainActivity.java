@@ -106,7 +106,7 @@ public class MainActivity extends AppCompatActivity {
         Datos.listanombres.add("GUERRA, EIMY");
 
 
-        Datos.voto.add("1");
+
         for (i=0; i<38; i++)
         {
             Datos.voto.add("0");
