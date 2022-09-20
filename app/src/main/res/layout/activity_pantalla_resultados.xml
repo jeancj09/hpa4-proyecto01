@@ -15,7 +15,7 @@
         android:fontFamily="serif"
         android:text="Votos"
         android:textAlignment="center"
-        android:textSize="24sp"
+        android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="@+id/candidato3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/candidato3" />
@@ -29,7 +29,7 @@
         android:fontFamily="serif"
         android:text="Votos"
         android:textAlignment="center"
-        android:textSize="24sp"
+        android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/candidato2"
         app:layout_constraintTop_toTopOf="@+id/candidato2" />
@@ -49,8 +49,8 @@
 
     <ImageView
         android:id="@+id/candidato1"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="129dp"
+        android:layout_height="166dp"
         android:layout_marginStart="19dp"
         android:layout_marginEnd="20dp"
         android:layout_marginBottom="1dp"
@@ -62,8 +62,8 @@
 
     <ImageView
         android:id="@+id/candidato2"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="134dp"
+        android:layout_height="158dp"
         android:layout_marginStart="19dp"
         android:layout_marginEnd="20dp"
         app:layout_constraintBottom_toTopOf="@+id/candidato3"
@@ -74,8 +74,8 @@
 
     <ImageView
         android:id="@+id/candidato3"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="144dp"
+        android:layout_height="137dp"
         android:layout_marginStart="19dp"
         android:layout_marginEnd="20dp"
         android:layout_marginBottom="32dp"
@@ -108,7 +108,7 @@
         android:fontFamily="serif"
         android:text="Votos"
         android:textAlignment="center"
-        android:textSize="24sp"
+        android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="@+id/candidato1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/candidato1" />
