@@ -8,6 +8,10 @@ public class Datos {
     public static int pos,tot=0;
     public static int numvoto;
     public static String cedval;
+    public static String cand1="Vivian Valenzuela";
+    public static String cand2="Omar Aizpurua";
+    public static  String cand3="Martín Candanedo";
+    public static double vot1,vot2,vot3;
 
     public static int cont1 =0, cont2 =0, cont3 =0;
 

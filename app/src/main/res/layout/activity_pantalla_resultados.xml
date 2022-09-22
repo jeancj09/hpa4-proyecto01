@@ -2,94 +2,73 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/candidato3"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".PantallaResultados">
 
     <TextView
-        android:id="@+id/votos3"
+        android:id="@+id/tv1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="70dp"
-        android:layout_marginBottom="39dp"
+        android:layout_marginTop="76dp"
+        android:layout_marginBottom="106dp"
+        android:fontFamily="serif"
+        android:text="Resultados de la Votación"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/votos1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/votos1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="112dp"
         android:fontFamily="serif"
         android:text="Votos"
         android:textAlignment="center"
         android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="@+id/candidato3"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/candidato3" />
+        app:layout_constraintBottom_toTopOf="@+id/votos2"
+        app:layout_constraintEnd_toEndOf="@+id/votos2"
+        app:layout_constraintStart_toStartOf="@+id/votos2"
+        app:layout_constraintTop_toBottomOf="@+id/tv1" />
 
     <TextView
         android:id="@+id/votos2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="36dp"
-        android:layout_marginEnd="70dp"
+        android:layout_marginBottom="130dp"
         android:fontFamily="serif"
         android:text="Votos"
         android:textAlignment="center"
         android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/candidato2"
-        app:layout_constraintTop_toTopOf="@+id/candidato2" />
+        app:layout_constraintBottom_toTopOf="@+id/votos3"
+        app:layout_constraintEnd_toEndOf="@+id/votos3"
+        app:layout_constraintStart_toStartOf="@+id/votos3"
+        app:layout_constraintTop_toBottomOf="@+id/votos1" />
 
     <TextView
-        android:id="@+id/tv1"
+        android:id="@+id/votos3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="58dp"
+        android:layout_marginBottom="110dp"
         android:fontFamily="serif"
-        android:text="Resultados de la Votación"
+        android:text="Votos"
         android:textAlignment="center"
-        android:textSize="36sp"
-        app:layout_constraintBottom_toTopOf="@+id/candidato1"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/tvwinner"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <ImageView
-        android:id="@+id/candidato1"
-        android:layout_width="129dp"
-        android:layout_height="166dp"
-        android:layout_marginStart="19dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginBottom="1dp"
-        app:layout_constraintBottom_toTopOf="@+id/candidato2"
-        app:layout_constraintEnd_toStartOf="@+id/votos1"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv1"
-        app:srcCompat="@drawable/vivian_valenzuela" />
-
-    <ImageView
-        android:id="@+id/candidato2"
-        android:layout_width="134dp"
-        android:layout_height="158dp"
-        android:layout_marginStart="19dp"
-        android:layout_marginEnd="20dp"
-        app:layout_constraintBottom_toTopOf="@+id/candidato3"
-        app:layout_constraintEnd_toStartOf="@+id/votos2"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/candidato1"
-        app:srcCompat="@drawable/omar_aizpurua" />
-
-    <ImageView
-        android:id="@+id/candidato3"
-        android:layout_width="144dp"
-        android:layout_height="137dp"
-        android:layout_marginStart="19dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginBottom="32dp"
-        app:layout_constraintBottom_toTopOf="@+id/bttback"
-        app:layout_constraintEnd_toStartOf="@+id/votos3"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/candidato2"
-        app:srcCompat="@drawable/matin_candanedo" />
+        app:layout_constraintTop_toBottomOf="@+id/votos2" />
 
     <Button
         android:id="@+id/bttback"
-        android:layout_width="137dp"
-        android:layout_height="52dp"
-        android:layout_marginBottom="36dp"
+        android:layout_width="146dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="12dp"
         android:fontFamily="serif"
         android:text="Volver"
         android:textAlignment="center"
@@ -97,20 +76,52 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/candidato3" />
+        app:layout_constraintTop_toBottomOf="@+id/tvwinner" />
 
     <TextView
-        android:id="@+id/votos1"
+        android:id="@+id/tvwinner"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="70dp"
-        android:layout_marginBottom="39dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginBottom="16dp"
         android:fontFamily="serif"
-        android:text="Votos"
-        android:textAlignment="center"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="@+id/candidato1"
+        android:text="Ganador Actual"
+        app:layout_constraintBottom_toTopOf="@+id/bttback"
+        app:layout_constraintStart_toStartOf="@+id/bttback"
+        app:layout_constraintTop_toBottomOf="@+id/votos3" />
+
+    <ImageView
+        android:id="@+id/img1"
+        android:layout_width="44dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="120dp"
+        android:layout_marginEnd="100dp"
+        android:layout_marginBottom="50dp"
+        app:layout_constraintBottom_toTopOf="@+id/img2"
+        app:layout_constraintEnd_toEndOf="@+id/tv1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/vivian_valenzuela" />
+
+    <ImageView
+        android:id="@+id/img2"
+        android:layout_width="44dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginBottom="63dp"
+        app:layout_constraintBottom_toTopOf="@+id/img3"
+        app:layout_constraintStart_toStartOf="@+id/img1"
+        app:layout_constraintTop_toBottomOf="@+id/img1"
+        app:srcCompat="@drawable/omar_aizpurua" />
+
+    <ImageView
+        android:id="@+id/img3"
+        android:layout_width="63dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="168dp"
+        android:layout_marginBottom="261dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/candidato1" />
+        app:layout_constraintTop_toBottomOf="@+id/img2"
+        app:srcCompat="@drawable/matin_candanedo" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

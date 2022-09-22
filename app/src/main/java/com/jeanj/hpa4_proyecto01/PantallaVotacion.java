@@ -91,7 +91,7 @@ public class PantallaVotacion extends AppCompatActivity {
                     toast.show();
 
                     Intent intent = new Intent(view.getContext(), MenuPrincipal.class);
-                    startActivityForResult(intent, 0);
+                    startActivity(intent);
                 }
                 else
                 {

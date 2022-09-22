@@ -65,6 +65,7 @@ public class MainActivity extends AppCompatActivity {
         Datos.listacedula.add("03-0745-000950");
 
 
+
         Datos.listanombres.add("ARROCHA, EDWIN");
         Datos.listanombres.add("BRENES, MICHELLE");
         Datos.listanombres.add("BUSTAMANTE , EDDY");
@@ -107,7 +108,7 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-        for (i=0; i<39; i++)
+        for (i=0; i<38; i++)
         {
             Datos.voto.add("0");
         }
@@ -133,7 +134,7 @@ public class MainActivity extends AppCompatActivity {
                     toast.show();
 
                     Intent intent = new Intent(view.getContext(), MenuPrincipal.class);
-                    startActivityForResult(intent, 0);
+                    startActivity(intent);
                 }
                 else
                 {
