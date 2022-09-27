@@ -11,6 +11,8 @@ import android.widget.RadioButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import org.w3c.dom.Text;
+
 public class PantallaResultados extends AppCompatActivity {
 
 
@@ -19,7 +21,10 @@ public class PantallaResultados extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pantalla_resultados);
         Button bttback;
-        TextView v1,v2,v3,tvwinner;
+
+        TextView v1,v2,v3, tvwinner;
+        TextView v4;
+
         ImageView img1,img2,img3;
         bttback=findViewById(R.id.bttback);
         v1=findViewById(R.id.votos1);
@@ -30,17 +35,22 @@ public class PantallaResultados extends AppCompatActivity {
         img2=findViewById(R.id.img2);
         img3=findViewById(R.id.img3);
 
+        v4=findViewById(R.id.votos4);
+
 
         String c1 = String.valueOf(Datos.cont1);
         String c2 = String.valueOf(Datos.cont2);
         String c3 = String.valueOf(Datos.cont3);
+        String c4 = String.valueOf(Datos.cont4);
         String totvot = String.valueOf(Datos.vot1=(Datos.cont1*100.00)/Datos.tot);
         String totvot2 = String.valueOf((Datos.vot2=(Datos.cont2*100.00)/Datos.tot));
         String totvot3 = String.valueOf((Datos.vot3=(Datos.cont3*100.00)/Datos.tot));
+        String totvot4 = String.valueOf((Datos.vot4=(Datos.cont4*100.00)/Datos.tot));
 
         v1.setText("Votos: "+c1+" Procentaje: "+String.format("%.2f",Datos.vot1)+"%");
         v2.setText("Votos: "+c2+" Procentaje: "+String.format("%.2f",Datos.vot2)+"%");
         v3.setText("Votos: "+c3+" Procentaje: "+String.format("%.2f",Datos.vot3)+"%");
+        v4.setText("Votos Nulos: " +c4 + " Porcentaje: " + String.format("%.2f", Datos.vot4)+"%");
 
         if (Datos.cont1 > Datos.cont2) {
             if (Datos.cont1 > Datos.cont3) {
